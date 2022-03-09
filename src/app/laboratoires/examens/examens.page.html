@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>laboratoire</ion-title>
+    <ion-button  slot="end" class="retour" fill=clear routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content >
+  <div class="card">
+<div class="image">
+  <img src="/../../../assets/img/microscope.png">
+  
+</div>
+<br><br>
+<br>
+  <div class="card-title">
+    <h1 class="ion-no-margin">{{lab.nom_lab}}</h1><br>
+    <p></p>
+    <div class="info">Tel  +222{{lab.tel_lab}} <a href="tel: {{lab.tel_lab}}">  <ion-icon class="call" name="call-outline"></ion-icon></a></div>
+    <br>
+    <div class="info">{{lab.o}} Maintenant</div>
+    <br>
+    <div class="info"> {{lab.status}}</div><p></p><p></p>
+          <div class="map">Localisation  
+            <a [attr.href]="lab.url"><ion-icon class="maps" name="location-outline"></ion-icon></a></div>
+      <p>
+      <div  class="infs" >Les bilan santé <ion-icon name="caret-down-outline" ></ion-icon></div>
+      <br>
+      
+
+<div class="inf" lines="inset" *ngFor="let s of examen" >
+ <div *ngIf="s.id_lab==lab.id_lab">
+   <u (click)="get(s.id,s.nom,lab.id_lab,lab.nom_lab,lab.tel_lab,lab.o,lab.status,lab.url)" class="infn" >{{s.nom}}</u><p></div>
+  </div></div>
+
+</div>
+  
+</ion-content>

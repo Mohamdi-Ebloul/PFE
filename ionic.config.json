@@ -1,0 +1,8 @@
+{
+  "name": "Ma Santé",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

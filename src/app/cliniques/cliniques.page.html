@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cliniques</ion-title>
+  <ion-button slot="end" class="retour" fill=clear routerLink="../" ><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <ion-searchbar type="search" placeholder="Clinique" (ionInput)="sch()"  [(ngModel)]="nom"></ion-searchbar>
+
+<br>
+<a href="https://www.google.com/maps/search/cliniques/@18.07353,-15.960433,17z?hl=fr"><ion-button class="but4" fill=clear color="primary" >cliniques prés de vous<ion-icon name="location-outline"></ion-icon></ion-button></a>
+
+    
+    <ion-card color=light lines="inset" *ngFor="let c of clinique">
+      <ion-cardcontent >
+      
+        <ion-label >
+          
+          <div class="title">{{c.nom_cl}}</div>
+        </ion-label><img src="{{c.image}}">
+        <ion-button   class="view" fill="outline" slot="end" size="small"  (click)="getview(c.id_cl,c.nom_cl,c.tel_cl,c.heure_ov_cl,c.heure_f_cl,c.url,c.image)">Détails</ion-button><br>
+      
+
+     <div class="info">
+      Tel +222{{c.tel_cl}}  <a href="tel:{{c.tel_cl}}">  <ion-icon class="call" name="call-outline"></ion-icon></a></div>
+      <br>  <div class="info">  Overt  24h/24h </div> <br>
+          <p>
+        <div class="map">
+          <a [attr.href]="c.url"><ion-icon class="maps" color="secondary" name="location-outline"></ion-icon></a></div>
+  </ion-cardcontent>
+    </ion-card>
+    
+
+</ion-content>

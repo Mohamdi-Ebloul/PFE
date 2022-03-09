@@ -1,0 +1,6 @@
+{
+	"appId": "org.codeforrom.sihti",
+	"appName": "sihti",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

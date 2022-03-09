@@ -1,0 +1,33 @@
+
+
+ .card-background {
+ --background:url(/../../assets/img/background.jpg)  no-repeat center center/cover;;
+
+
+.card{  
+  bottom: 0;
+  width: 80%;
+  padding: 10.5rem 3.5rem;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  .title{
+  
+    color: rgb(22, 2, 5);
+    font-weight: bold;
+    border-color: pink;
+    border-radius: 20%;
+    display: block;
+    background-size: 2px;
+         }
+  img{
+    width: 100%;
+  }
+
+}
+
+
+
+}    

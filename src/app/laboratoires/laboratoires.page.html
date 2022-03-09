@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Laboratoires</ion-title>
+    <ion-button slot="end" class="retour" fill=clear routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="card-background">
+  <ion-searchbar type="search" placeholder="Laboratoire" (ionInput)="sch()"  [(ngModel)]="nomlab"></ion-searchbar>
+
+  <a href="https://www.google.fr/maps/search/laboratoires/@18.1511357,-15.993491,11z/data=!4m3!2m2!5m1!10e2"> <ion-button class="but4" fill=clear color="primary">laboratoir prés de vous<ion-icon name="location-outline"></ion-icon></ion-button></a>
+ 
+<ion-card color=light lines="inset" *ngFor="let laboratoire of laboratoir" >
+  <div class="image"><img src="/../../assets/img/microscope.png" ></div>
+    <div class="card-title"><ion-label><div class="title">{{laboratoire.nom_lab}}</div></ion-label></div>
+    
+  
+
+ <br>
+    <div class="info">Tel  +222{{laboratoire.tel_lab}} <a href="tel: {{laboratoire.tel_lab}}">  <ion-icon class="call" name="call-outline"></ion-icon></a></div>
+    <br>
+    <div class="info">{{o}} Maintenant</div>
+    <br>
+    <div class="info"> {{status}}</div><p></p><p></p>
+    <div class="map"><a [attr.href]="laboratoire.url"><ion-icon class="maps" color="secondary" name="location-outline"></ion-icon></a></div><br>
+    <ion-button class="but5" fill=clear color="primary" (click)="get(laboratoire.id_lab,laboratoire.nom_lab,laboratoire.tel_lab,laboratoire.url,o,status)">Les examens <img class="drug" src="/../../assets/img/test.png" ></ion-button> <br>
+</ion-card>
+</ion-content>

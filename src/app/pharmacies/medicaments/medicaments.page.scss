@@ -1,0 +1,150 @@
+ion-content{
+
+  --background:url(/../../assets/img/bak.jpg)  no-repeat center center/cover;
+  
+  }
+      
+  
+  .card{
+  align-items: center;
+    text-align: center;
+    width: 100%;
+  
+  }
+  
+  
+  
+  ion-button{
+  
+      height: 10%;
+      width: 25%;
+  
+  }
+  
+  
+  ion-label{
+  
+    font-size: 130%;
+  
+  }
+  
+  
+  ion-input{
+  
+  --placeholder-color: rgb(19, 20, 20);
+  --box-shadow: gray;
+    background-color: white;
+    color: #000;
+  
+  }
+  
+  
+  .butrecherch {
+          
+          position: relative;
+          text-align: center;
+          align-self: center;
+          height: 80%;
+          width: 22%;
+          --border-radius: 25px;
+          --background:pink;
+  
+        }
+        
+  
+  .but4 {
+           display: block;
+            margin:auto;
+            width: 60%;
+            height: 6%; 
+            font-weight: 600;  
+            font-size: 67%;
+            color: rgb(22, 2, 5);
+            border-color: pink;
+            border-radius: 20%;
+            display: block;
+            background-color: white;
+            background-size: 1px;
+        }
+  
+  
+        .view{
+  
+            --color-hover:pink;
+            font-weight: bold;
+            font-size: 80%
+        }
+        
+        
+        .but_item{
+  
+          --background:url(/../../assets/img/med.jpg) 50% 40% no-repeat;
+  
+        }
+        
+  
+        img {
+  
+            height: 50px;
+            width: 50%;
+  
+        }
+  
+  
+        .retour{
+  
+          height: 5%;
+          width: 20%;
+          font-weight: bold;
+          color: rgb(22, 2, 5);
+      
+        }
+  
+  
+        .title{
+    
+    color: rgb(22, 2, 5);
+    font-weight: bold;
+    border-color: pink;
+    border-radius: 20%;
+    display: block;
+    font-size: 90%;
+    background-size: 2px;
+display: flex;
+
+         }
+       
+  
+         .info{
+          
+
+  
+          color: rgb(22, 2, 5);
+          border-color: pink;
+          border-radius: 20%;
+          display: block;
+          width: 100%;
+          font-size: 17px;
+             
+              
+      text-align: left;
+          background-size: 1px;
+  
+        }
+        
+  
+  
+        .map{
+   
+          color:green;
+          font-size: 100; 
+          
+          font-weight: bold;  
+   
+       }
+       .maps {
+        font-size: 35px;
+      }
+      .call {
+        font-size: 20px;
+      }

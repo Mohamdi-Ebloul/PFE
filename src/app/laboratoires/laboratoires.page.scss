@@ -1,0 +1,165 @@
+ion-content{
+
+  --background:url(/../../assets/img/back.jpg)  no-repeat center center/cover;
+
+}
+    
+
+ion-card{
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  width: 90%;
+  .image{
+    position: absolute;
+    top: -6,5rem;
+    width: 40%;
+    left: 60%;
+    transform: translateY(40%);
+  }
+  ion-label{
+    font-weight: 600;
+    font-size: 130%;
+  }
+
+}
+
+
+
+ion-button{
+
+    height: 10%;
+    width: 25%;
+
+}
+
+
+ion-label{
+
+  font-size: 130%;
+
+}
+
+
+ion-input{
+
+--placeholder-color: rgb(19, 20, 20);
+--box-shadow: gray;
+  background-color: white;
+  color: #fff;
+
+}
+
+
+.butrecherch {
+        
+        position: relative;
+        text-align: center;
+        align-self: center;
+        height: 80%;
+        width: 22%;
+        --border-radius: 25px;
+        --background:pink;
+
+      }
+      
+
+.but4 {
+         display: block;
+          margin:auto;
+          width: 60%;
+          height: 6%; 
+          font-weight: 600; 
+          font-size: 60%;
+          color: rgb(22, 2, 5);
+          border-color: pink;
+          border-radius: 20%;
+          display: block;
+          background-color: #fff;
+          background-size: 1px;
+      }
+      .but5 {
+        display: block;
+         margin:auto;
+         width: 90%;
+         height: 8%; 
+         font-weight: 600;  
+         font-size: 100%;
+         border-color: pink;
+         border-radius: 20%;
+         display: block;
+         background-color: white;
+         background-size: 1px;
+     }
+     .drug{
+      width: 10%;
+      height: 10%;
+     }
+
+
+      .view{
+
+          --color-hover:pink;
+          font-weight: bold;
+
+      }
+      
+      
+      
+
+      img {
+
+          height: 90px;
+          width: 100%;
+
+      }
+
+
+      .retour{
+
+        height: 5%;
+        width: 20%;
+        font-weight: bold;
+        color: rgb(22, 2, 5);
+    
+      }
+      .call {
+        font-size: 20px;
+      }
+      .maps {
+        font-size: 35px;
+      }
+      .title{
+  
+  color: rgb(22, 2, 5);
+  font-weight: bold;
+  border-radius: 20%;
+  display: block;
+  background-size: 2px;
+       }
+     
+
+       .info{
+      
+        font-weight: bold;
+        color: rgb(22, 2, 5);
+        border-radius: 20%;
+        display: block;
+        
+        background-size: 1px;
+        width: 70%;
+            
+        background-color: rgb(221, 204, 207);
+        
+text-align: left;
+      }
+
+
+      .map{
+ 
+        color:green;
+        font-size: 100; 
+        font-weight: bold;  
+ 
+     }
+    

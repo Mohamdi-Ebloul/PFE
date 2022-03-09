@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Clinique</ion-title>
+    <ion-button  slot="end" class="retour" fill=clear routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content >
+  <div class="card">
+<div class="image">
+  <img src="{{view.image}}">
+  
+</div>
+<br>
+
+  <div class="card-title">
+    <h1 class="ion-no-margin">{{view.nom}}</h1><br>
+    <div class="info">
+      Tel +222{{view.tel}}  <a href="tel:{{view.tel}}">  <ion-icon class="call" name="call-outline"></ion-icon></a>
+       </div> <br>
+        <div class="info"> Overt  24h/24h</div> 
+        <p>
+          <div class="map">Localisation  
+            <a [attr.href]="view.url"><ion-icon class="maps" name="location-outline"></ion-icon></a></div>
+      <p>
+      <div  class="infs" >Les Specialitées <ion-icon name="caret-down-outline" ></ion-icon></div>
+      <br>
+      
+
+<div class="inf" lines="inset" *ngFor="let s of sp" >
+ <div *ngIf="s.id_cl==view.idcl"><b> {{s.nom_sp}}</b><br>
+   <u (click)="getdoc(s.id_dr,s.nom_doc,view.idcl,view.nom,view.tel,view.ho,view.hf,view.url,view.image)" class="infn" >Dr. {{s.nom_doc}}  <img src="/../../assets/img/doctor.png"></u><br><br>
+   <b>{{s.jour}} [{{s.heure_ov_cl}}--{{s.heure_f_cl}}]</b>
+   <p></div>
+  </div><p></p>
+</div>
+
+</div>
+  
+</ion-content>

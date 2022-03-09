@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>hopitaux</ion-title>
+    <ion-button  slot="end" class="retour" fill=clear routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content >
+  <div class="card">
+<div class="image">
+  <img src="{{view.image}}">
+  
+</div>
+<br><br>
+<br>
+  <div class="card-title">
+    <h1 class="ion-no-margin">{{view.nom}}</h1><br>
+    <p></p>
+          <div class="map">Localisation  
+            <a [attr.href]="view.url"><ion-icon class="maps" name="location-outline"></ion-icon></a></div>
+      <p>
+      <div  class="infs" >Les Specialitées <ion-icon name="caret-down-outline" ></ion-icon></div>
+      <br>
+      
+
+<div class="inf" lines="inset" *ngFor="let s of sp" >
+ <div *ngIf="s.id_H==view.idcl"><b> {{s.nom_sp}}</b><br>
+   <u (click)="getdoc(s.id_dr,s.nom_doc,view.idcl,view.nom,view.url,view.image)" class="infn" >Dr. {{s.nom_doc}}  <img src="/../../assets/img/doctor.png"></u><p></div>
+  </div></div>
+
+</div>
+  
+</ion-content>

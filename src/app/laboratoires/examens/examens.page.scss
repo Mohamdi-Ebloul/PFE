@@ -1,0 +1,56 @@
+ion-content{
+    --background:url(/../../assets/img/backgroundd.jpg)  no-repeat center center/cover;
+  
+    .maps {
+      font-size: 35px;
+    }
+  
+  .card{
+    height: 80%;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    border-radius: 3rem 3rem 0 0;
+    padding: 2rem;
+    top: -6,5rem,;
+    color: rgb(22, 2, 5);
+    display: block;
+  
+    .image{
+      position: absolute;
+      top: -6,5rem;
+      width: 58%;
+      left: 20%;
+      transform: translateY(-70%);
+    }
+    
+    .card-title{
+      font-size: 80%;
+      margin-top: 8%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+      .h1{
+        font-weight: 800;
+      }
+      .map{
+        color:green;   
+        align-items: center;
+        display: block;
+        font-size: 120%;
+     }
+     .inf{
+       img{
+         width: 7%;
+       }
+       .infn{
+         font-family: italic;
+         color: rgb(4, 68, 68);
+       }
+     }
+    
+    }
+  
+  }
+  }

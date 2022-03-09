@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Examens</ion-title>
+    <ion-button  slot="end" class="retour" routerLink="../" fill=clear (click)="getview(doctor.idcl,doctor.nomcl,doctor.telcl,doctor.heureovcl,doctor.heurefcl,doctor.url,doctor.image)" ><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content >
+  <div class="card">
+    <div class="image">
+      <img src="/../../../assets/img/test.png">
+      
+    </div>
+    
+    <div class="card-content">
+    
+    
+      <ion-label><div class="title">{{exm.nom}}</div></ion-label>
+     <p></p>
+      
+        <div class="info" lines="inset" *ngFor="let l of examen"><u (click)="get(l.id_lab,l.nom_lab,l.tel_lab,exm.o,exm.status,exm.url)"> 
+          <div *ngIf="l.id==exm.id"><img src="/../../../assets/img/microscope.png">{{l.nom_lab}}</div> </u><p></p>
+          </div>
+         
+         
+ </div> 
+  </div>
+</ion-content>

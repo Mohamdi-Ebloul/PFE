@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Pharmacies</ion-title>
+    <ion-button slot="end" class="retour" fill=clear routerLink="../"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background">
+  <ion-searchbar type="search" placeholder="Pharamacies" (ionInput)="sch()" [(ngModel)]="nomph"></ion-searchbar>
+
+
+<br>
+<a href="https://www.google.fr/maps/search/pharmacies/@18.1269475,-15.9500236,16z/data=!4m2!2m1!6e2"> <ion-button class="but4" fill=clear color="primary" >pharmacies   prés de vous<ion-icon name="location-outline"></ion-icon></ion-button></a>
+
+  <ion-card color=light lines="inset" *ngFor="let pharmacie of pharmacy" >
+    
+    
+      <ion-label >
+        <div class="title">{{pharmacie.nom_ph}}</div>
+      </ion-label><img src="/../../assets/img/snake.png" >
+    <br>
+      <div class="info" >
+        Tel  +222{{pharmacie.tel_ph}} <a href="tel: {{pharmacie.tel_ph}}">  <ion-icon class="call" name="call-outline"></ion-icon></a></div>
+        <br>
+        <div class="info">{{o}} Maintenant</div>
+      <br>
+      <div class="info"> {{status}}</div><p></p>
+      <div class="map">  
+        <a [attr.href]="pharmacie.url"><ion-icon class="maps" color="secondary" name="location-outline"></ion-icon></a></div><br>
+        <ion-button class="but5" fill=clear color="primary" routerLink="/pharmacies/medicaments" (click)="getview(pharmacie.id_ph,pharmacie.nom_ph)">Les medicaments <img class="drug" src="/../../assets/img/drug.png"></ion-button> <br>
+  </ion-card>
+  </ion-content>
